@@ -11,12 +11,13 @@ KEYWORDS = [
 
 # Token types
 class TT(Enum):
+	LT, LE, EQ, NE, GT, GE,\
 	ADD, SUB, INC, DEC,\
 	AND, OR, NOT, XOR,\
 	LPR, RPR, LBR, RBR, COL,\
 	ASSIGN,\
 	NUM, IDENTIFIER, KEYWORD, NEWLINE, EOF\
-	= range(19)
+	= range(25)
 
 	def __str__(self):
 		return super().__str__().removeprefix("TT.")
